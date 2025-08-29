@@ -12,10 +12,10 @@ User-friendly Streamlit interface
 
 Tech Stack:
 
-Python 3
-Streamlit – web app framework
-PyPDF2 – extract text from PDF resumes
-pandas – data handling
+Python 3,
+Streamlit – web app framework,
+PyPDF2 – extract text from PDF resumes,
+pandas – data handling,
 
 
 Future Improvements:
