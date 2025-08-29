@@ -17,13 +17,6 @@ Streamlit – web app framework
 PyPDF2 – extract text from PDF resumes
 pandas – data handling
 
-resume-skill-extractor/
-│
-├── resume_skill_extractor.py   # Main Streamlit app
-├── requirements.txt            # Python dependencies
-├── sample_resume.pdf           # Example resume (optional)
-├── job_description.txt         # Example job description (optional)
-└── README.md                   # Project documentation
 
 Future Improvements:
 
