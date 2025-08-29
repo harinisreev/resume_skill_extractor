@@ -1,0 +1,6 @@
+We are looking for a Python Developer with experience in:
+- Python, SQL, and Flask
+- Machine Learning and Deep Learning frameworks (TensorFlow, PyTorch)
+- Web technologies like HTML, CSS, and JavaScript
+- Cloud deployment using AWS
+- Strong knowledge of Git and Docker
