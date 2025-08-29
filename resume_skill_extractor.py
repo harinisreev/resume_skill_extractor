@@ -79,14 +79,14 @@ if uploaded_resume and jd_text.strip():
     col1, col2 = st.columns(2)
 
     with col1:
-        st.subheader("📌 Skills Found in Resume")
+        st.subheader("Skills Found in Resume: ")
         if resume_skills:
             st.write("\n".join([f"- {skill.upper()}" for skill in resume_skills]))
         else:
             st.write("No skills detected.")
 
     with col2:
-        st.subheader("📌 Skills Found in Job Description")
+        st.subheader("Skills Found in Job Description: ")
         if jd_skills:
             st.write("\n".join([f"- {skill.upper()}" for skill in jd_skills]))
         else:
@@ -120,11 +120,11 @@ if uploaded_resume and jd_text.strip():
         st.info("⚠️ No skills found in Job Description. Unable to analyze suitability.")
     else:
         if coverage >= 70:
-            st.success("✅ The candidate is a **Good Fit** for the job. Most required skills are present.")
+            st.success("The candidate is a **Good Fit** for the job. Most required skills are present.")
         elif 40 <= coverage < 70:
-            st.warning("⚠️ The candidate is a **Moderate Fit**. Some important skills are missing.")
+            st.warning("The candidate is a **Moderate Fit**. Some important skills are missing.")
         else:
-            st.error("❌ The candidate is **Not a Good Fit**. Too many required skills are missing.")
+            st.error("The candidate is **Not a Good Fit**. Too many required skills are missing.")
     
     # -------------------------------
     # Downloadable CSV (Neat Table)
@@ -138,7 +138,7 @@ if uploaded_resume and jd_text.strip():
     df["Missing"] = df["Skill"].apply(lambda x: "YES" if x in missing else "NO")
 
     # Show in Streamlit as interactive table
-    st.subheader("📊 Detailed Skill Comparison Table")
+    st.subheader("Detailed Skill Comparison Table")
     st.dataframe(df)
 
     # Download CSV in clean format
