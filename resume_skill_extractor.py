@@ -45,7 +45,7 @@ def match_skills(resume_skills, jd_skills):
 # 3. Streamlit App
 # -------------------------------
 st.set_page_config(page_title="Resume Skill Extractor (Manual)", layout="wide")
-st.title("📄 Resume Skill Extractor (Manual Version)")
+st.title("Resume Skill Extractor (Manual Version)")
 
 uploaded_resume = st.file_uploader("Upload Resume (PDF)", type=["pdf"])
 jd_text = st.text_area("Paste Job Description Here")
@@ -68,10 +68,10 @@ if uploaded_resume and jd_text.strip():
     # -------------------------------
     if jd_skills:
         coverage = (len(matched) / len(jd_skills)) * 100
-        st.metric("📊 Resume Coverage", f"{coverage:.1f} %")
+        st.metric("Resume Coverage", f"{coverage:.1f} %")
     else:
         coverage = 0
-        st.metric("📊 Resume Coverage", "N/A")
+        st.metric("Resume Coverage", "N/A")
 
     # -------------------------------
     # Side-by-side display for Resume vs JD skills
@@ -114,7 +114,7 @@ if uploaded_resume and jd_text.strip():
     # -------------------------------
     # Candidate Suitability Analysis
     # -------------------------------
-    st.subheader("📊 Candidate Analysis")
+    st.subheader("Candidate Analysis")
 
     if not jd_skills:
         st.info("⚠️ No skills found in Job Description. Unable to analyze suitability.")
